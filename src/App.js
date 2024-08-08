@@ -1009,7 +1009,7 @@ function App() {
             </div>
           </div>
         </section>
-        <footer id="join">
+        {/* <footer id="join">
           <div className="p-4 text-white">
             <h1 className="text-center mt-3 mb-3">JOIN-WITH-ME</h1>
             <ol
@@ -1068,7 +1068,7 @@ function App() {
               inspirition taken from @Youtube and @Google
             </p>
           </div>
-        </footer>
+        </footer> */}
       </div>
     </div>
   );
