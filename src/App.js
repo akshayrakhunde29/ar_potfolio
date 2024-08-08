@@ -1,6 +1,6 @@
 import "./App.css";
 import background from "./assets/backend-565fc01f.png";
-import cInter from "./assets/cIntern-4f0a29b3.png";
+import cInter from "./assets/swayam.png";
 import creator from "./assets/creator-dbbffaec.png";
 import cricct from "./assets/cricct-7b288464.png";
 import css from "./assets/css-79a7f026.png";
@@ -16,13 +16,24 @@ import nodejs from "./assets/nodejs-d83eb6dd.png";
 import playbig from "./assets/playbig-7e661a1a.png";
 import react from "./assets/reactjs-966214a8.png";
 import redux from "./assets/redux-171787ca.png";
-import sportsit from "./assets/sportsIt-c5266016.png";
+import sportsit from "./assets/negroup.jpeg";
 import tailwind from "./assets/tailwind-6ece120d.png";
 import upcric from "./assets/upcric-2d1f9406.png";
 import web from "./assets/web-0d05165f.png";
+import bootstrap from "./assets/bootstrap.png";
+import native from "./assets/native.png";
+import typescript from "./assets/typescript.png";
+import nodelogo from "./assets/nextjs.png";
+import university from "./assets/university_logo.png";
 import pic from "./assets/pic.png";
 import { useState } from "react";
 import { FaFacebook } from "react-icons/fa";
+import { FaInstagramSquare } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaTelegram } from "react-icons/fa";
+import { FaWhatsappSquare } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithubSquare } from "react-icons/fa";
 
 function App() {
   const [showMenu, setShowMenu] = useState(false);
@@ -191,14 +202,14 @@ function App() {
           className="mt-20 flex flex-wrap gap-10"
           style={{ justifyContent: "center" }}
         >
-          <div className="xs:w-[250px] w-full">
+          <div className="xs:w-[530px] w-full" >
             <div className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card">
               <div
                 options="[object Object]"
                 className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
               >
                 <img
-                  src={web}
+                  src={university}
                   alt="web-development"
                   className="w-16 h-16 object-contain"
                 />
@@ -217,14 +228,14 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="xs:w-[250px] w-full">
+          <div className="xs:w-[530px] w-full" >
             <div className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card">
               <div
                 options="[object Object]"
                 className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
               >
                 <img
-                  src={web}
+                  src={university}
                   alt="web-development"
                   className="w-16 h-16 object-contain"
                 />
@@ -337,7 +348,8 @@ function App() {
                   <img
                     src={cInter}
                     alt="C360 softwares (Hyderabad)"
-                    className="w-[60%] h-[60%] object-contain"
+                    className="w-[100%] h-[100%] object-contain"
+                    style={{ borderRadius: "50%" }}
                   />
                 </div>
               </span>
@@ -395,7 +407,8 @@ function App() {
                   <img
                     src={sportsit}
                     alt="Sports It (Hyderabad)"
-                    className="w-[60%] h-[60%] object-contain"
+                    className="w-[100%] h-[100%] object-contain"
+                    style={{ borderRadius: "50%" }}
                   />
                 </div>
               </span>
@@ -466,7 +479,7 @@ function App() {
               }}
             >
               <div style={{ width: "100%", height: "100%" }}>
-                <img src={css} />
+                <img src={html} />
               </div>
             </div>
           </div>
@@ -482,7 +495,7 @@ function App() {
               }}
             >
               <div style={{ width: "100%", height: "100%" }}>
-                <img src={html} />
+                <img src={css} />
               </div>
             </div>
           </div>
@@ -530,22 +543,6 @@ function App() {
               }}
             >
               <div style={{ width: "100%", height: "100%" }}>
-                <img src={mongodb} />
-              </div>
-            </div>
-          </div>
-          <div className="w-28 h-28">
-            <div
-              style={{
-                position: "relative",
-                width: "100%",
-                height: "100%",
-                overflow: "hidden",
-                pointerEvents: "auto",
-                touchAction: "none",
-              }}
-            >
-              <div style={{ width: "100%", height: "100%" }}>
                 <img src={redux} />
               </div>
             </div>
@@ -562,7 +559,7 @@ function App() {
               }}
             >
               <div style={{ width: "100%", height: "100%" }}>
-                <img src={tailwind} />
+                <img src={mongodb} />
               </div>
             </div>
           </div>
@@ -578,7 +575,7 @@ function App() {
               }}
             >
               <div style={{ width: "100%", height: "100%" }}>
-                <img src={css} />
+                <img src={nodelogo} />
               </div>
             </div>
           </div>
@@ -594,7 +591,7 @@ function App() {
               }}
             >
               <div style={{ width: "100%", height: "100%" }}>
-                <img src={css} />
+                <img src={bootstrap} />
               </div>
             </div>
           </div>
@@ -610,39 +607,7 @@ function App() {
               }}
             >
               <div style={{ width: "100%", height: "100%" }}>
-                <img src={css} />
-              </div>
-            </div>
-          </div>
-          <div className="w-28 h-28">
-            <div
-              style={{
-                position: "relative",
-                width: "100%",
-                height: "100%",
-                overflow: "hidden",
-                pointerEvents: "auto",
-                touchAction: "none",
-              }}
-            >
-              <div style={{ width: "100%", height: "100%" }}>
-                <img src={css} />
-              </div>
-            </div>
-          </div>
-          <div className="w-28 h-28">
-            <div
-              style={{
-                position: "relative",
-                width: "100%",
-                height: "100%",
-                overflow: "hidden",
-                pointerEvents: "auto",
-                touchAction: "none",
-              }}
-            >
-              <div style={{ width: "100%", height: "100%" }}>
-                <img src={css} />
+                <img src={typescript} />
               </div>
             </div>
           </div>
@@ -1009,19 +974,26 @@ function App() {
             </div>
           </div>
         </section>
-        {/* <footer id="join">
+        <footer id="join">
           <div className="p-4 text-white">
-            <h1 className="text-center mt-3 mb-3">JOIN-WITH-ME</h1>
+            <h1 className="text-center mt-3 mb-3" style={{ fontSize: "36px" }}>
+              JOIN-WITH-ME
+            </h1>
             <ol
               className="pt-4 list-unstyled align-items-center gap-4 fs-4 d-flex justify-content-center text-center"
-              style={{ fontSize: "20px" }}
+              style={{
+                fontSize: "30px",
+                display: "flex",
+                justifyContent: "center",
+                margin: "26px 0",
+              }}
             >
               <li>
                 <a
                   href="https://instagram.com/akshayrakhunde29?utm_source=qr&amp;igshid=NGExMmI2YTkyZg%3D%3D"
                   target="_blank"
                 >
-                  <FaFacebook />
+                  <FaInstagramSquare />
                 </a>
               </li>
               <li>
@@ -1029,22 +1001,22 @@ function App() {
                   href="https://www.facebook.com/profile.php?id=100008784332640"
                   target="_blank"
                 >
-                  <span className="bi bi-facebook d-block"></span>
+                  <FaFacebook />
                 </a>
               </li>
               <li>
                 <a href="https://twitter.com/" target="_blank">
-                  <span className="bi bi-twitter d-block"></span>
+                  <FaXTwitter />
                 </a>
               </li>
               <li>
                 <a href="https://telegram.me/" target="_blank">
-                  <span className="bi bi-telegram d-block"></span>
+                  <FaTelegram />
                 </a>
               </li>
               <li>
                 <a href="https://web.whatsapp.com/" target="_blank">
-                  <span className="bi bi-whatsapp d-block"></span>
+                  <FaWhatsappSquare />
                 </a>
               </li>
               <li>
@@ -1052,7 +1024,7 @@ function App() {
                   href="https://instagram.com/akshayrakhunde29?utm_source=qr&amp;igshid=NGExMmI2YTkyZg%3D%3D"
                   target="_blank"
                 >
-                  <span className="bi bi-linkedin d-block"></span>
+                  <FaLinkedin />
                 </a>
               </li>
               <li>
@@ -1060,15 +1032,15 @@ function App() {
                   href="https://github.com/akshayrakhunde29/UICodes"
                   target="_blank"
                 >
-                  <span className="bi bi-github d-block"></span>
+                  <FaGithubSquare />
                 </a>
               </li>
             </ol>
-            <p className="text-center mt-4">
+            <p className="text-center mt-4" style={{ paddingBottom: "14px" }}>
               inspirition taken from @Youtube and @Google
             </p>
           </div>
-        </footer> */}
+        </footer>
       </div>
     </div>
   );
