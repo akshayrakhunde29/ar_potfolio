@@ -1458,7 +1458,7 @@ video {
 }
 
 .hash-span {
-  margin-top: -70px;
+  margin-top: -100px;
   padding-bottom: 100px;
   display: block;
 }
@@ -1656,4 +1656,8 @@ video {
   .xl\:flex-row {
     flex-direction: row;
   }
+}
+
+.mt{
+  margin-top: 6px;
 }

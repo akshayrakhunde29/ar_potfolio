@@ -8,7 +8,7 @@ import defender from "./assets/defender-ccbf66b9.png";
 import github from "./assets/github-3b4e1609.png";
 import herobg from "./assets/herobg-ecbfddc8.png";
 import html from "./assets/html-92b76a73.png";
-import logo from "./assets/backend-565fc01f.png";
+import logo from "./assets/akLogo.svg";
 import menu from "./assets/menu-b5599218.svg";
 import mobile from "./assets/mobile-896ef2f5.png";
 import mongodb from "./assets/mongodb-54000b2b.png";
@@ -34,6 +34,13 @@ import { FaTelegram } from "react-icons/fa";
 import { FaWhatsappSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithubSquare } from "react-icons/fa";
+import { IoMdPerson } from "react-icons/io";
+import { BsGeoAltFill } from "react-icons/bs";
+import { MdMarkEmailRead } from "react-icons/md";
+import neplay from "./assets/neplay.png";
+import vleague from "./assets/vleague.png";
+import cricdesi from "./assets/cricdesi.jpg";
+import samba from "./assets/samba.png";
 
 function App() {
   const [showMenu, setShowMenu] = useState(false);
@@ -189,12 +196,19 @@ function App() {
             <h4 style={{ fontSize: "22px", marginBottom: "8px" }}>
               I'm a Full Stack Web Developer
             </h4>
-            <p>
-              Highly motivated and skilled web developer with two years of
-              experience in designing and implementing web applications. Seeking
-              a challenging role to leverage my expertise in front-end
-              development, along with my passion for creating innovative and
-              user-friendly websites.
+            <p style={{ textAlign: "justify" }}>
+              I am a Frontend Developer with over 2 years of experience in the
+              IT industry. I specialize in building and maintaining web
+              applications using React, React Native, Next.js, and Redux. I am
+              skilled in HTML, CSS, and JavaScript, which helps me create
+              interactive and dynamic user interfaces.
+              <br /> I enjoy working with these technologies to deliver smooth
+              and user-friendly web experiences. I have a proven track record of
+              collaborating well with teams to complete projects successfully. I
+              am always eager to learn new things and keep up with the latest
+              trends in web development. I am looking forward to joining a
+              company where I can contribute to exciting projects and grow my
+              skills further.
             </p>
           </div>
         </p>
@@ -202,7 +216,7 @@ function App() {
           className="mt-20 flex flex-wrap gap-10"
           style={{ justifyContent: "center" }}
         >
-          <div className="xs:w-[530px] w-full" >
+          <div className="xs:w-[530px] w-full">
             <div className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card">
               <div
                 options="[object Object]"
@@ -228,7 +242,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="xs:w-[530px] w-full" >
+          <div className="xs:w-[530px] w-full">
             <div className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card">
               <div
                 options="[object Object]"
@@ -255,7 +269,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="xs:w-[250px] w-full">
+          {/* <div className="xs:w-[250px] w-full">
             <div className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card">
               <div
                 options="[object Object]"
@@ -288,8 +302,8 @@ function App() {
                 </h3>
               </div>
             </div>
-          </div>
-          <div className="xs:w-[250px] w-full">
+          </div> */}
+          {/* <div className="xs:w-[250px] w-full">
             <div className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card">
               <div
                 options="[object Object]"
@@ -322,7 +336,7 @@ function App() {
                 </h3>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
       <section className="sm:px-16 px-6 sm:py-16 py-10 max-w-7xl mx-auto relative z-0">
@@ -579,7 +593,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="w-28 h-28">
+          {/* <div className="w-28 h-28">
             <div
               style={{
                 position: "relative",
@@ -610,7 +624,7 @@ function App() {
                 <img src={typescript} />
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
       <section className="sm:px-16 px-6 sm:py-16 py-10 max-w-7xl mx-auto relative z-0">
@@ -634,12 +648,12 @@ function App() {
             and manage projects effectively.
           </p>
         </div>
-        <div className="mt-20 flex flex-wrap gap-7">
+        <div className="mt-20 flex flex-wrap gap-5">
           <div>
             <div className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
               <div className="relative w-full h-[230px]">
                 <img
-                  src={upcric}
+                  src={vleague}
                   alt="project_image"
                   className="w-full h-full object-cover rounded-2xl"
                 />
@@ -739,7 +753,7 @@ function App() {
             <div className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
               <div className="relative w-full h-[230px]">
                 <img
-                  src={defender}
+                  src={samba}
                   alt="project_image"
                   className="w-full h-full object-cover rounded-2xl"
                 />
@@ -754,12 +768,10 @@ function App() {
                 </div>
               </div>
               <div className="mt-5">
-                <h3 className="text-white font-bold text-[24px]">
-                  One Cricket
-                </h3>
+                <h3 className="text-white font-bold text-[24px]">Samba</h3>
                 <p className="mt-2 text-secondary text-[14px]">
-                  One Cricket is a React web application where cricket
-                  enthusiasts can play games and earn coins
+                  Samba is a React web application where socker enthusiasts can
+                  play games and earn coins
                 </p>
               </div>
               <div className="mt-4 flex flex-wrap gap-2">
@@ -773,7 +785,7 @@ function App() {
             <div className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
               <div className="relative w-full h-[230px]">
                 <img
-                  src={defender}
+                  src={cricdesi}
                   alt="project_image"
                   className="w-full h-full object-cover rounded-2xl"
                 />
@@ -807,7 +819,7 @@ function App() {
             <div className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
               <div className="relative w-full h-[230px]">
                 <img
-                  src={defender}
+                  src={neplay}
                   alt="project_image"
                   className="w-full h-full object-cover rounded-2xl"
                 />
@@ -870,30 +882,52 @@ function App() {
                       If You Want to contact me personally you can call me
                       between 10 AM to 6 PM my mobile no. 8329093880
                     </dt>
-                    <dt>
-                      <span className="bi bi-person-fill"></span> Name
+                    <dt
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "4px",
+                      }}
+                    >
+                      <IoMdPerson /> Name
                     </dt>
                     <dd className="ms-4"> Akshay Rakhunde</dd>
-                    <dt>
-                      <span className="bi bi-geo-alt-fill"></span> Premnent
-                      Address
+                    <dt
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "4px",
+                      }}
+                    >
+                      <BsGeoAltFill /> Premnent Address
                     </dt>
                     <dd className="ms-4">
                       {" "}
                       Ward-1 At-Mangli Post-Dhanora TQ-Zari Jamni Dist-Yavatmal
                       Maharashtra - 445305
                     </dd>
-                    <dt>
-                      <span className="bi bi-geo-alt-fill"></span> Current
-                      Address
+                    <dt
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "4px",
+                      }}
+                    >
+                      <BsGeoAltFill /> Current Address
                     </dt>
                     <dd className="ms-4">
                       {" "}
                       flat no 303 R K Mythri Apartment, P Janardhan Reddy Nagar,
                       Gachibowli, Hyderabad Telangana - 500081
                     </dd>
-                    <dt>
-                      <span className="bi bi-envelope-fill"></span> Gmail
+                    <dt
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "4px",
+                      }}
+                    >
+                      <MdMarkEmailRead /> Gmail
                     </dt>
                     <dd className="ms-4"> rakhundeakshay29@gmail.com</dd>
                   </dl>
@@ -974,29 +1008,33 @@ function App() {
             </div>
           </div>
         </section>
-        <footer id="join">
+        <footer
+          id="join"
+          style={{ position: "fixed", bottom: "0", right: "16px" }}
+        >
           <div className="p-4 text-white">
-            <h1 className="text-center mt-3 mb-3" style={{ fontSize: "36px" }}>
+            {/* <h1 className="text-center mt-3 mb-3" style={{ fontSize: "36px" }}>
               JOIN-WITH-ME
-            </h1>
+            </h1> */}
             <ol
               className="pt-4 list-unstyled align-items-center gap-4 fs-4 d-flex justify-content-center text-center"
               style={{
                 fontSize: "30px",
-                display: "flex",
+                display: "block",
                 justifyContent: "center",
+                gap: "10px",
                 margin: "26px 0",
               }}
             >
-              <li>
+              <li className="">
                 <a
-                  href="https://instagram.com/akshayrakhunde29?utm_source=qr&amp;igshid=NGExMmI2YTkyZg%3D%3D"
+                  href="https://www.instagram.com/akshay__rakhunde/"
                   target="_blank"
                 >
                   <FaInstagramSquare />
                 </a>
               </li>
-              <li>
+              <li className="mt">
                 <a
                   href="https://www.facebook.com/profile.php?id=100008784332640"
                   target="_blank"
@@ -1004,40 +1042,40 @@ function App() {
                   <FaFacebook />
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a href="https://twitter.com/" target="_blank">
                   <FaXTwitter />
                 </a>
-              </li>
-              <li>
-                <a href="https://telegram.me/" target="_blank">
+              </li> */}
+              <li className="mt">
+                <a href="https://t.me/akshayrakhunde2" target="_blank">
                   <FaTelegram />
                 </a>
               </li>
-              <li>
+              <li className="mt">
                 <a href="https://web.whatsapp.com/" target="_blank">
                   <FaWhatsappSquare />
                 </a>
               </li>
-              <li>
+              <li className="mt">
                 <a
-                  href="https://instagram.com/akshayrakhunde29?utm_source=qr&amp;igshid=NGExMmI2YTkyZg%3D%3D"
+                  href="https://www.linkedin.com/in/akshay-rakhunde-837819206/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=in"
                   target="_blank"
                 >
                   <FaLinkedin />
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
                   href="https://github.com/akshayrakhunde29/UICodes"
                   target="_blank"
                 >
                   <FaGithubSquare />
                 </a>
-              </li>
+              </li> */}
             </ol>
             <p className="text-center mt-4" style={{ paddingBottom: "14px" }}>
-              inspirition taken from @Youtube and @Google
+              {/* inspirition taken from @Youtube and @Google */}
             </p>
           </div>
         </footer>
