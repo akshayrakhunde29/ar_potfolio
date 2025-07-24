@@ -19,8 +19,10 @@ import Header from "./component/Header";
 import Experience from "./component/Experience";
 import Contact from "./component/Contact";
 import Project from "./component/Project";
+import { useEffect } from "react";
 
 function App() {
+  
   return (
     <div className="realative z-0 bg-primary">
       <Header />

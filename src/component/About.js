@@ -29,7 +29,7 @@ const About = () => {
           <h4 style={{ fontSize: "22px", marginBottom: "8px" }}>
             I'm a Full Stack Developer
           </h4>
-          <p style={{ textAlign: "justify" }}>
+          <p>
             Full Stack Web Developer with 3 years of experience in building web
             applications, specializing in both frontend and backend development.
             Proficient in technologies like React, Node.js, Next.js, JavaScript,
