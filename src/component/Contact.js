@@ -9,6 +9,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { IoMdPerson } from "react-icons/io";
 import { BsGeoAltFill } from "react-icons/bs";
 import { MdMarkEmailRead } from "react-icons/md";
+import axios from "axios";
 const Contact = () => {
   const [userDetail, setUserDetail] = useState({
     name: "",
@@ -16,6 +17,7 @@ const Contact = () => {
     mobile: "",
     message: "",
   });
+  const [successMsg, setSuccessMsg] = useState("");
   const [error, setError] = useState({
     nameError: false,
     emailError: false,
@@ -26,6 +28,7 @@ const Contact = () => {
   const handleInput = (e) => {
     const name = e.target.name;
     const value = e.target.value;
+    setSuccessMsg("");
     setError({
       nameError: false,
       emailError: false,
@@ -46,7 +49,7 @@ const Contact = () => {
     }
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (userDetail.name.trim() === "") {
       return setError({ ...error, nameError: true });
     }
@@ -59,7 +62,30 @@ const Contact = () => {
     if (userDetail.message.trim() === "") {
       return setError({ ...error, messageError: true });
     }
-    console.log("userDetail", userDetail);
+    try {
+      const response = await axios.post(
+        "https://contact-api-ten.vercel.app/api/contact",
+        userDetail
+      );
+
+      if (response?.data?.success === "Message sent successfully.") {
+        setUserDetail({
+          name: "",
+          email: "",
+          mobile: "",
+          message: "",
+        });
+        setSuccessMsg("Message sent successfully.");
+        setTimeout(() => {
+          setSuccessMsg("");
+        }, 3000);
+      }
+    } catch (error) {
+      console.error(
+        "Error sending data",
+        error.response?.data || error.message
+      );
+    }
   };
   return (
     <div className="realtive z-0">
@@ -208,6 +234,9 @@ const Contact = () => {
                     onChange={(e) => handleInput(e)}
                     value={userDetail?.message}
                   />
+                  <div style={{ paddingTop: "8px", color: "green" }}>
+                    {successMsg}
+                  </div>
                 </label>
                 <button
                   type="button"
