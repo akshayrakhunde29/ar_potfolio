@@ -3,7 +3,7 @@ import logo from "../assets/akLogo.svg";
 import menu from "../assets/menu-b5599218.svg";
 
 const Header = () => {
-    const [showMenu, setShowMenu] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
   return (
     <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
       <nav className="sm:px-16 px-6  w-full flex items-center py-5 fixed top-0 z-20 bg-primary">
@@ -23,6 +23,9 @@ const Header = () => {
             </li>
             <li className="text-secondary hover:text-white text-[18px] font-medium cursor-pointer">
               <a href="#contact">Contact</a>
+            </li>
+            <li className="text-secondary hover:text-white text-[18px] font-medium cursor-pointer">
+              <a href="/resume_akshay.pdf" download>Resume</a>
             </li>
           </ul>
           <div className="sm:hidden flex flex-1 justify-end items-center">
