@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 // import { FaXTwitter } from "react-icons/fa6";
@@ -10,7 +13,10 @@ import { IoMdPerson } from "react-icons/io";
 import { BsGeoAltFill } from "react-icons/bs";
 import { MdMarkEmailRead } from "react-icons/md";
 import axios from "axios";
+
 const Contact = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [userDetail, setUserDetail] = useState({
     name: "",
     email: "",
@@ -87,6 +93,39 @@ const Contact = () => {
       );
     }
   };
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 }
+    }
+  };
+
+  const socialVariants = {
+    hidden: { opacity: 0, scale: 0 },
+    visible: (index) => ({
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.4,
+        delay: index * 0.1,
+        type: "spring",
+        stiffness: 200
+      }
+    })
+  };
+
   return (
     <div className="realtive z-0">
       <section className="sm:px-16 px-6 sm:py-16 py-10 max-w-7xl mx-auto relative z-0">
@@ -97,17 +136,27 @@ const Contact = () => {
         >
           &nbsp;
         </span>
-        <div className="xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden">
-          <div
+        <motion.div 
+          ref={ref}
+          className="xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden"
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+        >
+          <motion.div
             className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
             style={{ flex: "1" }}
+            variants={itemVariants}
           >
-            <h3
+            <motion.h3
               style={{ textAlign: "center" }}
               className="text-white font-black md:text-[50px] sm:text-[50px] xs:text-[40px] text-[30px]"
+              initial={{ opacity: 0, y: -20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+              transition={{ duration: 0.6 }}
             >
               Contact ME.
-            </h3>
+            </motion.h3>
             <div className="contactBlock">
               <div
                 className="col ps-5 pe-5"
@@ -175,11 +224,15 @@ const Contact = () => {
                 style={{ marginTop: "2rem", flex: "2" }}
                 className="mt-12 flex flex-col gap-8"
               >
-                <label className="flex flex-col">
+                <motion.label 
+                  className="flex flex-col"
+                  variants={itemVariants}
+                  whileFocus={{ scale: 1.02 }}
+                >
                   <span className="text-white font-medium mb-4">
                     Your Name <span className="color-red">*</span>
                   </span>
-                  <input
+                  <motion.input
                     type="text"
                     name="name"
                     placeholder="What's your good name?"
@@ -188,13 +241,19 @@ const Contact = () => {
                     }`}
                     onChange={(e) => handleInput(e)}
                     value={userDetail?.name}
+                    whileFocus={{ scale: 1.02, borderColor: "#915EFF" }}
+                    transition={{ duration: 0.2 }}
                   />
-                </label>
-                <label className="flex flex-col">
+                </motion.label>
+                <motion.label 
+                  className="flex flex-col"
+                  variants={itemVariants}
+                  whileFocus={{ scale: 1.02 }}
+                >
                   <span className="text-white font-medium mb-4">
                     Your email <span className="color-red">*</span>
                   </span>
-                  <input
+                  <motion.input
                     type="email"
                     name="email"
                     placeholder="What's your email?"
@@ -203,13 +262,19 @@ const Contact = () => {
                     }`}
                     onChange={(e) => handleInput(e)}
                     value={userDetail?.email}
+                    whileFocus={{ scale: 1.02, borderColor: "#915EFF" }}
+                    transition={{ duration: 0.2 }}
                   />
-                </label>
-                <label className="flex flex-col">
+                </motion.label>
+                <motion.label 
+                  className="flex flex-col"
+                  variants={itemVariants}
+                  whileFocus={{ scale: 1.02 }}
+                >
                   <span className="text-white font-medium mb-4">
                     Your mobile <span className="color-red">*</span>
                   </span>
-                  <input
+                  <motion.input
                     type="phone"
                     name="mobile"
                     placeholder="What's your mobile no?"
@@ -218,13 +283,19 @@ const Contact = () => {
                     }`}
                     onChange={(e) => handleInput(e)}
                     value={userDetail?.mobile}
+                    whileFocus={{ scale: 1.02, borderColor: "#915EFF" }}
+                    transition={{ duration: 0.2 }}
                   />
-                </label>
-                <label className="flex flex-col">
+                </motion.label>
+                <motion.label 
+                  className="flex flex-col"
+                  variants={itemVariants}
+                  whileFocus={{ scale: 1.02 }}
+                >
                   <span className="text-white font-medium mb-4">
                     Your Message <span className="color-red">*</span>
                   </span>
-                  <textarea
+                  <motion.textarea
                     rows={4}
                     name="message"
                     placeholder="What you want to say?"
@@ -233,22 +304,35 @@ const Contact = () => {
                     }`}
                     onChange={(e) => handleInput(e)}
                     value={userDetail?.message}
+                    whileFocus={{ scale: 1.02, borderColor: "#915EFF" }}
+                    transition={{ duration: 0.2 }}
                   />
-                  <div style={{ paddingTop: "8px", color: "green" }}>
+                  <motion.div 
+                    style={{ paddingTop: "8px", color: "green" }}
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={successMsg ? { opacity: 1, y: 0 } : { opacity: 0, y: -10 }}
+                    transition={{ duration: 0.3 }}
+                  >
                     {successMsg}
-                  </div>
-                </label>
-                <button
+                  </motion.div>
+                </motion.label>
+                <motion.button
                   type="button"
                   className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
                   onClick={handleSubmit}
+                  whileHover={{ 
+                    scale: 1.05,
+                    boxShadow: "0 10px 30px rgba(145, 94, 255, 0.4)"
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ duration: 0.2 }}
                 >
                   Send
-                </button>
+                </motion.button>
               </form>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </section>
       <footer
         id="join"
@@ -258,7 +342,7 @@ const Contact = () => {
           {/* <h1 className="text-center mt-3 mb-3" style={{ fontSize: "36px" }}>
               JOIN-WITH-ME
             </h1> */}
-          <ol
+          <motion.ol
             className="pt-4 list-unstyled align-items-center gap-4 fs-4 d-flex justify-content-center text-center"
             style={{
               fontSize: "30px",
@@ -267,55 +351,43 @@ const Contact = () => {
               gap: "10px",
               margin: "26px 0",
             }}
+            initial="hidden"
+            animate="visible"
+            variants={containerVariants}
           >
-            <li className="">
-              <a
-                href="https://www.instagram.com/akshay__rakhunde/"
-                target="_blank"
-              >
-                <FaInstagramSquare />
-              </a>
-            </li>
-            <li className="mt">
-              <a
-                href="https://www.facebook.com/profile.php?id=100008784332640"
-                target="_blank"
-              >
-                <FaFacebook />
-              </a>
-            </li>
-            {/* <li>
-                <a href="https://twitter.com/" target="_blank">
-                  <FaXTwitter />
-                </a>
-              </li> */}
-            <li className="mt">
-              <a href="https://t.me/akshayrakhunde2" target="_blank">
-                <FaTelegram />
-              </a>
-            </li>
-            <li className="mt">
-              <a href="https://web.whatsapp.com/" target="_blank">
-                <FaWhatsappSquare />
-              </a>
-            </li>
-            <li className="mt">
-              <a
-                href="https://www.linkedin.com/in/akshay-rakhunde-837819206/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=in"
-                target="_blank"
-              >
-                <FaLinkedin />
-              </a>
-            </li>
-            {/* <li>
-                <a
-                  href="https://github.com/akshayrakhunde29/UICodes"
-                  target="_blank"
+            {[
+              { icon: FaInstagramSquare, href: "https://www.instagram.com/akshay__rakhunde/", name: "Instagram" },
+              { icon: FaFacebook, href: "https://www.facebook.com/profile.php?id=100008784332640", name: "Facebook" },
+              { icon: FaTelegram, href: "https://t.me/akshayrakhunde2", name: "Telegram" },
+              { icon: FaWhatsappSquare, href: "https://web.whatsapp.com/", name: "WhatsApp" },
+              { icon: FaLinkedin, href: "https://www.linkedin.com/in/akshay-rakhunde-837819206/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=in", name: "LinkedIn" }
+            ].map((social, index) => {
+              const Icon = social.icon;
+              return (
+                <motion.li 
+                  key={index}
+                  className={index > 0 ? "mt" : ""}
+                  variants={socialVariants}
+                  custom={index}
                 >
-                  <FaGithubSquare />
-                </a>
-              </li> */}
-          </ol>
+                  <motion.a
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ 
+                      scale: 1.3, 
+                      rotate: 360,
+                      color: "#915EFF"
+                    }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <Icon />
+                  </motion.a>
+                </motion.li>
+              );
+            })}
+          </motion.ol>
           <p className="text-center mt-4" style={{ paddingBottom: "14px" }}>
             {/* inspirition taken from @Youtube and @Google */}
           </p>

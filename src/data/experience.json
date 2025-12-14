@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "title": "Web Developer",
+    "company": "Swayam Group (Hyderabad)",
+    "date": "May 2022 – October 2022",
+    "iconBg": "rgb(56, 62, 86)",
+    "iconImage": "swayam",
+    "responsibilities": [
+      "Collaborated in the creation of responsive web designs and user interfaces to meet project requirements",
+      "Gained proficiency in HTML, CSS, JavaScript and React.js working on projects to enhance coding skills",
+      "Integrated of third-party APIs and services into web applications",
+      "Participated in team meetings and code reviews to learn best practices and improve coding skills."
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Frontend Developer",
+    "company": "Sports It (Hyderabad)",
+    "date": "November 2022 – November 2024",
+    "iconBg": "rgb(230, 222, 221)",
+    "iconImage": "sportsit",
+    "responsibilities": [
+      "Developed and maintained responsive web applications using HTML, CSS, JavaScript and React.Js to ensure optimal user experiences across various devices and browsers.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Implemented front-end designs and interactive user interfaces, ensuring seamless navigation and engaging user experiences.",
+      "Managed website deployments and server configurations, ensuring a secure and efficient hosting environment."
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Full Stack Developer",
+    "company": "Juuuno Adtech Ptv ltd",
+    "date": "january 2025 – August 2025",
+    "iconBg": "rgb(230, 222, 221)",
+    "iconImage": "juuuno",
+    "responsibilities": [
+      "Developed a campaign management platform for an advertising company to create, manage, and monitor digital ad campaigns",
+      "Designed and implemented responsive user interfaces using React, and built scalable RESTful APIs with Node.js and MongoDB to handle campaign data, analytics, and user management",
+      "Managed website deployments and server configurations, ensuring a secure and efficient hosting environment."
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Full Stack Developer",
+    "company": "Integrated Softtech",
+    "date": "September 2024 – Present",
+    "iconBg": "rgb(230, 222, 221)",
+    "iconImage": "isofttech",
+    "responsibilities": [
+      "Worked on the Merilion Cruise website and admin panel to manage end-to-end cruise operations",
+      "The admin panel handles cruise listings, schedules, pricing, bookings, passenger details, discounts, and overall system management",
+      "Focused on building reliable APIs, smooth data flow, and an easy-to-use admin experience"
+    ]
+  }
+]
+
