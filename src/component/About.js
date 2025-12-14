@@ -42,18 +42,18 @@ const About = () => {
       <span className="hash-span" id="about">
         &nbsp;
       </span>
-      <motion.div
+      <motion.header
         initial={{ opacity: 0, y: -30 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -30 }}
         transition={{ duration: 0.6 }}
       >
-        <h2
+        <h1
           style={{ textAlign: "center" }}
           className="text-white font-black md:text-[40px] sm:text-[50px] xs:text-[40px] text-[30px]"
         >
           ABOUT ME
-        </h2>
-      </motion.div>
+        </h1>
+      </motion.header>
       <motion.div 
         ref={ref}
         className="aboutBlock mt-4 text-secondary text-[17px] leading-[30px]"
@@ -64,7 +64,8 @@ const About = () => {
         <motion.img 
           className="myPic" 
           src={pic} 
-          alt="pic"
+          alt="Akshay Rakhunde - Full Stack Developer"
+          title="Akshay Rakhunde - Full Stack Developer at Integrated Softtech"
           variants={imageVariants}
           whileHover={{ 
             scale: 1.05, 
@@ -73,8 +74,8 @@ const About = () => {
           }}
           transition={{ duration: 0.3 }}
         />
-        <motion.div variants={itemVariants}>
-          <motion.h1
+        <motion.article variants={itemVariants}>
+          <motion.h2
             style={{
               color: "#fff",
               fontSize: "30px",
@@ -85,21 +86,21 @@ const About = () => {
             transition={{ duration: 0.2 }}
           >
             Akshay Arvind Rakhunde
-          </motion.h1>
-          <motion.h4 
+          </motion.h2>
+          <motion.h3 
             style={{ fontSize: "22px", marginBottom: "8px" }}
             initial={{ opacity: 0, x: -20 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
             transition={{ delay: 0.3, duration: 0.6 }}
           >
             I'm a Full Stack Developer
-          </motion.h4>
+          </motion.h3>
           <motion.p
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            Full Stack Web Developer with 3+ years of experience in building web
+            <strong>Akshay Rakhunde</strong> is a Full Stack Web Developer with 3+ years of experience in building web
             applications, specializing in both frontend and backend development.
             Proficient in technologies like React, Node.js, Next.js, JavaScript,
             and TypeScript. Strong problem-solving skills with a focus on
@@ -107,7 +108,9 @@ const About = () => {
             Quick to adapt to new technologies, with a proven ability to learn
             and apply concepts effectively. Committed to continuous improvement
             in both skills and productivity.
-            <br /> I enjoy working with these technologies to deliver smooth and
+            <br /> 
+            <br />
+            I enjoy working with these technologies to deliver smooth and
             user-friendly web experiences. I have a proven track record of
             collaborating well with teams to complete projects successfully. I
             am always eager to learn new things and keep up with the latest
@@ -115,7 +118,7 @@ const About = () => {
             where I can contribute to exciting projects and grow my skills
             further.
           </motion.p>
-        </motion.div>
+        </motion.article>
       </motion.div>
     </>
   );
