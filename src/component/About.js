@@ -99,7 +99,7 @@ const About = () => {
             animate={isInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            Full Stack Web Developer with 3 years of experience in building web
+            Full Stack Web Developer with 3+ years of experience in building web
             applications, specializing in both frontend and backend development.
             Proficient in technologies like React, Node.js, Next.js, JavaScript,
             and TypeScript. Strong problem-solving skills with a focus on
